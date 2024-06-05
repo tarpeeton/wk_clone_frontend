@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const NewUser: FC = () => {
+const NewUser: FC = () =>  {
 	return (
 		<>
 			<div className='rounded-xl mt-4 FormElemtsBg form'>
@@ -17,12 +17,21 @@ const NewUser: FC = () => {
 						</span>
 					</button>
 					<div className='mt-3 text-center joinFormTextInfo'>
-					После регистрации вы получите доступ ко всем возможностям VK ID
-					<br/>
-					<NavLink to="https://id.vk.com/about/id" className="aboutLink"> Узнать больше</NavLink>
+						После регистрации вы получите доступ ко всем возможностям VK ID
+						<br />
+						<NavLink to='https://id.vk.com/about/id' className='aboutLink'>
+							{' '}
+							Узнать больше
+						</NavLink>
 					</div>
 				</div>
 			</div>
+			<NavLink
+				to='https://vk.com/legal/recommendations'
+				className='recomendation  joinFormTextInfo  flex justify-center  hover:underline'
+			>
+				Применяются рекомендательные технологии
+			</NavLink>
 		</>
 	)
 }

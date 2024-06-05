@@ -76,13 +76,14 @@
 	flex-direction: column;
 	justify-content: center;
 }
-.inputForm  {
+.inputForm {
 	background-color: #333333;
 	border: 1px solid rgba(255, 255, 255, 0.16);
 }
-.inputForm  {
-			font-size: 13px;
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.inputForm {
+	font-size: 13px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .inputForm:focus {
 	border: 1px solid #61a2ff;
@@ -96,7 +97,8 @@
 .save {
 	font-size: 13px;
 	line-height: 19px;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /*  Qr Code */
@@ -113,7 +115,7 @@
 /*  new user */
 
 .JoinButton {
-	background-color: #4bb34b ;
+	background-color: #4bb34b;
 }
 .SignUpButton {
 	background-color: inherit;
@@ -128,4 +130,22 @@
 }
 .aboutLink:hover {
 	text-decoration: underline;
+}
+/* recomendation */
+.recomendation {
+	margin-top: 14px;
+}
+
+/* size */
+.size13Px {
+	font-size: 13px;
+	color: #71aaeb;
+}
+/* links hover effect */
+.size13Px:hover {
+	text-decoration: underline;
+}
+/* Footer Links */
+.bnav_a {
+	padding: 2px 5px;
 }
