@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, MouseEvent, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import SVG from './svg/formSvg'
 
@@ -9,9 +9,9 @@ const WelcomeForm: FC = () => {
 	const handleCheckboxChange = (): void => {
 		setIsChecked(!isChecked)
 	}
-	const serverUpdate = (): void => {
-		console.log(email)
-	}
+	const serverUpdate = (e: MouseEvent<HTMLButtonElement>): void => {
+		console.log(email);
+};
 
 	return (
 		<div className='form  FormElemtsBg rounded-xl'>
@@ -80,7 +80,7 @@ const WelcomeForm: FC = () => {
 			</div>
 			<div className='w-full justify-center border rounded-md items-center  mt-1 h-9 bg-white'>
 				<button
-					onClick={() => serverUpdate()}
+					onClick={serverUpdate}
 					className='w-full h-full px-4 outline-none'
 				>
 					<span className=' text-zinc-950  font-sans font-semibold'>Войти</span>

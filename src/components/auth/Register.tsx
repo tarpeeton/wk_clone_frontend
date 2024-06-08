@@ -1,14 +1,19 @@
-import { FC } from 'react'
+import { ChangeEvent, FC } from 'react'
 import { useState } from 'react'
 import './auth.css'
 import { QrCode } from './qrCode'
 import { NavLink } from 'react-router-dom'
 
 const Register: FC = () => {
+	
 	const [isChecked, setIsChecked] = useState<boolean>(true)
+	const [data, setData] = useState<string>('+7')
 
 	const handleCheckboxChange = (): void => {
 		setIsChecked(!isChecked)
+	}
+	const handeInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
+		setData(e.target.value)
 	}
 
 	return (
@@ -16,22 +21,21 @@ const Register: FC = () => {
 			<div className='contentItem  rounded-xl bg-zinc-900 mx-auto  flex flex-row justify-between p-3'>
 				<div className='WkCode rounded-lg  bg-zinc-800 flex flex-col items-center '>
 					<div className='QrContent flex flex-col items-center'>
-					<div className='qrCode p-3 rounded-lg'>
-						<QrCode />
+						<div className='qrCode p-3 rounded-lg'>
+							<QrCode />
+						</div>
+						<h1 className=' mt-4 text-white'>Быстрый вход по QR-коду</h1>
+						<span className='my-2 font-normal QrInfo'>
+							Отсканируйте QR-код сканером в приложении ВКонтакте или камерой
+							устройства
+						</span>
+						<NavLink
+							to='https://id.vk.com/about/faq/users/registration_and_login/login/QR/20313'
+							className='InfoLinks'
+						>
+							Подробнее
+						</NavLink>
 					</div>
-					<h1 className=' mt-4 text-white'>Быстрый вход по QR-коду</h1>
-					<span className='my-2 font-normal QrInfo'>
-						Отсканируйте QR-код сканером в приложении ВКонтакте или камерой
-						устройства
-					</span>
-					<NavLink
-						to='https://id.vk.com/about/faq/users/registration_and_login/login/QR/20313'
-						className='InfoLinks'
-					>
-						Подробнее
-					</NavLink>
-					</div>
-					
 				</div>
 				{/* wk Form */}
 				<div className='WkForm   flex flex-col h-full '>
@@ -57,12 +61,16 @@ const Register: FC = () => {
 							</svg>
 						</div>
 						<div className='stepHeaderInfo'>
-							<p className='text-white text-xl leading-5 font-medium'>Введите номер</p>
+							<p className='text-white text-xl leading-5 font-medium'>
+								Введите номер
+							</p>
 						</div>
-						<div  className='stepInfo QrInfo mt-2 w-full flex'>
-							<span className='w-full  items-center justify-center' style={{fontSize: '15px'}}>
-							Ваш номер телефона будет использоваться для входа в аккаунт
-
+						<div className='stepInfo QrInfo mt-2 w-full flex'>
+							<span
+								className='w-full  items-center justify-center'
+								style={{ fontSize: '15px' }}
+							>
+								Ваш номер телефона будет использоваться для входа в аккаунт
 							</span>
 						</div>
 					</div>
@@ -71,6 +79,9 @@ const Register: FC = () => {
 							type='text'
 							className='inputForm w-full h-9 border-none rounded-lg outline-none pt-2 pb-2 px-3 text-white'
 							placeholder='Телефон или почта'
+							autoFocus={true}
+							value={data}
+							onChange={handeInputChange}
 						/>
 						<div className='flex mt-3 w-full items-center'>
 							<input
@@ -124,7 +135,6 @@ const Register: FC = () => {
 								пользовательское соглашение
 							</NavLink>
 							и
-
 							<NavLink to='https://id.vk.com/privacy?' className='aboutLink'>
 								политику конфиденциальности
 							</NavLink>

@@ -1,7 +1,36 @@
 .RegisterContent {
 	background-color: rgba(9, 9, 9, 1);
 }
+.maxWith360 {
+	width: 360px;
+}
+.Gray800 {
+	background-color: #2c2d2e;
+}
+.promoLink {
+	font-size: 13px;
+    font-weight: 500;
+    color: #969a9f;
+}
+.NavigateButton {
+	color: #818488;
 
+}
+.infoSend {
+	font-size: 15px;
+	line-height: 20px;
+	color: #76787a;
+
+}
+.descriptionNumber {
+	color: #e1e3e6;
+}
+.DisplayTitle {
+	color: #e1e3e6;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+}
 .contentItem {
 	width: 47%;
 }
@@ -24,6 +53,7 @@
 .InfoLinks {
 	font-size: 14px;
 	color: #ffffff;
+	font-weight: 600;
 }
 
 .stepFooterInfo {
