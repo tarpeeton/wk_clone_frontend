@@ -1,8 +1,16 @@
-import { FC } from 'react'
+import  { FC  , FormEvent, FormEventHandler, MouseEvent } from 'react'
 import {NavLink} from 'react-router-dom'
 import './auth.css'
 import SVG from '../svg/formSvg'
-const ConfirmCode: FC = () => {
+import TimerCouldDown from './Timer'
+const ConfirmCode:FC = () => {
+	const { secondLeft, timerStart } = TimerCouldDown(); // Destructure the returned object
+    
+	const handleSubmit = (e: FormEvent<HTMLFormElement>):void => {
+		e.preventDefault();
+		timerStart(60)
+	}
+	
 	return (
 		<div className='RegisterContent min-h-screen w-full flex content-center items-center'>
 			<div className='flex flex-col mx-auto'>
@@ -42,26 +50,36 @@ const ConfirmCode: FC = () => {
 								</div>
 							</h4>
 							<div className='w-full'>
-							<input
+								<form onSubmit={handleSubmit}>
+								<input
 							type='text'
 							className='inputForm w-full h-9 border-none rounded-lg outline-none pt-2 pb-2 px-3 text-white mb-3'
 							placeholder='Телефон или почта'
 							autoFocus={true}
+							required={true}
 							
 						/>
 						<div className='flex flex-col gap-2 mt-3'>
-						<button className='w-full  px-4 outline-none rounded-lg bg-white h-9'>
+							
+						<button  className='w-full  px-4 outline-none rounded-lg bg-white h-9'>
 							<span className=' text-zinc-950  font-sans font-semibold'>
 								Продолжить
 							</span>
 						</button>
-						<button className='w-full  px-4 outline-none rounded-lg h-9  hover:bg-zinc-800'>
+						{secondLeft ? <span className='mx-auto infoSend flex h-9 items-center text-sm'>SMS придёт в течение {secondLeft}
+							</span> :
+							<button  className='w-full  px-4 outline-none rounded-lg h-9  hover:bg-zinc-800'>
 							<span className='text-white  font-sans font-semibold'>
 							Отправить ещё раз
 							</span>
 						</button>
-
+							}
+						
 						</div>
+								</form>
+						
+
+						
 						
 							</div>
 					</div>
