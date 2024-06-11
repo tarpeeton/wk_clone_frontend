@@ -10,7 +10,8 @@ const WelcomeForm: FC = () => {
 		setIsChecked(!isChecked)
 	}
 	const serverUpdate = (e: MouseEvent<HTMLButtonElement>): void => {
-		console.log(email);
+		e.preventDefault()
+		console.log(email)
 };
 
 	return (

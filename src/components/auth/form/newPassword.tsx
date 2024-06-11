@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import  { FC, useState } from 'react';
 import { NavLink } from 'react-router-dom'
 
 const NewPassword: FC = () => {
@@ -11,6 +11,7 @@ const NewPassword: FC = () => {
   };
 
   const passwordsMatch = password === confirmPassword;
+  console.warn( passwordsMatch)
 
   return (
     <div className='RegisterContent min-h-screen w-full flex content-center items-center'>
