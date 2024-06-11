@@ -9,7 +9,7 @@ const RuStore: string =
 	'https://www.rustore.ru/catalog/app/com.vkontakte.android'
 const Content: FC = () => {
 	return (
-		<div className='w-full conetntBg pt-4 '>
+		<div className='w-full conetntBg pt-4'>
 			<div className='h-screen'>
 				<div className='w-65 flex mx-auto  '>
 					<div className='w-65 mr-3 text-white pl-9'>

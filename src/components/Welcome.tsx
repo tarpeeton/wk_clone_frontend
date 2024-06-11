@@ -7,10 +7,11 @@ import Content from './content/content'
 const HomePage: FC = () => {
 	return (
 		<>
-		{/* Header */}
-			<HeaderComponent/>
+	{/* Header */}
+	<HeaderComponent/>
 			{/* Content */}
 			<Content/>
+	
 		</>
 	)
 }

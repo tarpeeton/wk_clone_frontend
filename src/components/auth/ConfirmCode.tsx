@@ -1,4 +1,4 @@
-import  { FC  , FormEvent, FormEventHandler, MouseEvent } from 'react'
+import  { FC  , FormEvent } from 'react'
 import {NavLink} from 'react-router-dom'
 import './auth.css'
 import SVG from '../svg/formSvg'

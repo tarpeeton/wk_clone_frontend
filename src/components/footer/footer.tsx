@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Footer: FC = () => {
 	return (
-		<div className='footerNav flex w-65 mx-auto justify-around mt-1'>
+		<div className='footerNav flex w-3/4  mx-auto justify-around mt-6'>
 			<div className='footerCopy flex items-center gap-1'>
 				<NavLink to='sdf' className='hover:underline size13Px'>
 					ВКонтакте
