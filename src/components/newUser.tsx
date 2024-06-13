@@ -1,12 +1,19 @@
-import { FC } from 'react'
-import { NavLink } from 'react-router-dom'
+import { FC , MouseEvent } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const NewUser: FC = () =>  {
+
+	const navigate = useNavigate();
+
+	const UserRegisterNavigate = (e: MouseEvent<HTMLButtonElement>): void => { 
+		e.preventDefault();
+		navigate('/register')
+	}
 	return (
 		<>
 			<div className='rounded-xl mt-4 FormElemtsBg form'>
 				<div className='JoinForm'>
-					<button className='JoinButton w-full border-none rounded-lg outline-none h-9 px-4'>
+					<button onClick={UserRegisterNavigate} className='JoinButton w-full border-none rounded-lg outline-none h-9 px-4'>
 						<span className='text-white font-sans font-semibold p-0 m-0 text-sm'>
 							Создать аккаунт
 						</span>

@@ -1,19 +1,23 @@
-import { ChangeEvent, FC } from 'react'
+import { ChangeEvent, FC  , MouseEvent} from 'react'
 import { useState } from 'react'
 import './auth.css'
 import { QrCode } from './qrCode'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Register: FC = () => {
 	
 	const [isChecked, setIsChecked] = useState<boolean>(true)
 	const [data, setData] = useState<string>('+7')
+	const navigate = useNavigate()
 
 	const handleCheckboxChange = (): void => {
 		setIsChecked(!isChecked)
 	}
 	const handeInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
 		setData(e.target.value)
+	}
+	const navigateToConfirm = (e: MouseEvent<HTMLButtonElement>): void => {
+		navigate('/confirm/code')
 	}
 
 	return (
@@ -124,7 +128,7 @@ const Register: FC = () => {
 						</div>
 					</section>
 					<div className='footerstepInfo flex flex-col justify-between grow-1'>
-						<button className='w-full  px-4 outline-none rounded-lg bg-white h-9'>
+						<button onClick={navigateToConfirm} className='w-full  px-4 outline-none rounded-lg bg-white h-9'>
 							<span className=' text-zinc-950  font-sans font-semibold'>
 								Продолжить
 							</span>
