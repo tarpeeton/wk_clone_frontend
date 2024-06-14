@@ -17,6 +17,7 @@ const Register: FC = () => {
 		setData(e.target.value)
 	}
 	const navigateToConfirm = (e: MouseEvent<HTMLButtonElement>): void => {
+		e.preventDefault()
 		navigate('/confirm/code')
 	}
 
