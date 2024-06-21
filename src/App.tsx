@@ -6,6 +6,7 @@ import ConfirmCode from './components/auth/confirm/ConfirmCode'
 import { NewPassword } from './components/auth/form/newPassword'
 import { RegisterForm } from './components/auth/form/register'
 import './index.css'
+import { Dashboard } from './components/dashboard'
 
 const App: FC = () => {
 	return (
@@ -16,6 +17,7 @@ const App: FC = () => {
 				<Route path='/confirm/code' element={<ConfirmCode />} />
 				<Route path='/auth/register' element={<RegisterForm />} />
 				<Route path='/auth/newPassword' element={<NewPassword />} />
+				<Route path='/feed' element={<Dashboard/>} />
 			</Routes>
 		</Router>
 	)
