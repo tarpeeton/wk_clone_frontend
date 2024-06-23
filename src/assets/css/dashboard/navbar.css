@@ -9,3 +9,43 @@
 .LinkAndText {
 	color: #939393;
 }
+.Links {
+	color: #71aaeb;
+}
+
+.LinksColorHover:hover {
+	border-bottom: 1px solid white;
+}
+
+/* Notification Header  */
+.Font13Header {
+	font-weight: 500;
+	color: #e1e3e6;
+	font-size: 13px;
+}
+.Font14pxNotification{ 
+	font-size: 14px;
+	font-weight: 600;
+	color: #e1e3e6;
+}
+.ColorBlack {
+	color: black;
+	font-weight: 600;
+
+}
+.ShowNotification {
+	border-top: 1px solid #36373B;
+	color: #71aaeb;
+	font-size: 12.5px;
+	border-radius: 0 0 var(12px) var(12px);
+}
+.NotificationMenuItem {
+	border-top: 1px solid #36373B;
+	padding: 10px 14px;
+}
+.NotificationMenuItem:hover {
+	background-color: #36373B;
+}
+.NotificationMenu {
+	border-radius: 0 0 9px 9px;
+}
