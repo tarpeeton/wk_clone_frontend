@@ -113,7 +113,9 @@
 }
 
 /*  Profile Setting Style */
-
+.service {
+	width: 105px;
+}
 .userPlaceHolderImage {
 	width: 56px;
 	height: 56px;
@@ -136,6 +138,7 @@
 	font-size: 13px;
 }
 .wkSpacingBeta {
+	width: 100%;
 	height: 8px;
 	padding: 4px 0;
 }

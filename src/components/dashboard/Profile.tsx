@@ -57,6 +57,8 @@ const ProfileSettings: FC = () => {
 							<MenuItem>
 								{({ active }) => (
 									<div className='flex flex-col'>
+												<div className='wkSpacingBeta'></div>
+
 										<div className='flex flex-col items-center justify-center my-2'>
 											<div className=' w-full flex flex-col justify-center items-center'>
 												<div className='userPlaceHolderImage'>
@@ -69,6 +71,7 @@ const ProfileSettings: FC = () => {
 													+998 ···· · ·· 42
 												</span>
 												<div className='wkSpacingBeta'></div>
+
 												<div className='w-full h-8 px-3'>
 													<div className='wkUiButton h-full flex items-center justify-center'>
 														<NavLink to='sdfksdf'>
@@ -103,8 +106,10 @@ const ProfileSettings: FC = () => {
 													</div>
 												</div>
 												<div className='wkSpacingBeta'></div>
-												<div className='w-full px-3'>
-													<NavLink to='wer' className='flex '>
+												{/* Settings */}
+												<div className='w-full px-3 h-9'>
+													<NavLink to='wer' className='flex items-center justify-between '>
+														<div className='flex items-center'>
 														<div className='wkIconSpacing'>
 															<svg
 																aria-hidden='true'
@@ -123,11 +128,14 @@ const ProfileSettings: FC = () => {
 															</svg>
 														</div>
 														<div className='LinksItems'>Баланс голосов</div>
+														</div>
+														
+														<span className='LinksItems'>0</span>
 													</NavLink>
 												</div>
 												{/* 2 */}
-												<div className='w-full px-3 flex items-center'>
-													<NavLink to='wer' className='flex '>
+												<div className='w-full px-3 h-9'>
+													<NavLink to='wer' className='flex items-center '>
 														<div className='wkIconSpacing'>
 															<svg
 																fill='#71aaeb'
@@ -149,8 +157,8 @@ const ProfileSettings: FC = () => {
 													</NavLink>
 												</div>
 												{/* 3 */}
-												<div className='w-full px-3'>
-													<NavLink to='wer' className='flex '>
+												<div className='w-full px-3 h-9'>
+													<NavLink to='wer' className='flex items-center'>
 														<div className='wkIconSpacing'>
 															<svg
 																aria-hidden='true'
@@ -176,8 +184,8 @@ const ProfileSettings: FC = () => {
 														</div>
 													</NavLink>
 												</div>
-												<div className='w-full px-3'>
-													<NavLink to='wer' className='flex '>
+												<div className='w-full px-3 h-9'>
+													<NavLink to='wer' className='flex items-center'>
 														<div className='wkIconSpacing'>
 															<svg
 																fill='#71aaeb'
@@ -201,8 +209,8 @@ const ProfileSettings: FC = () => {
 														<div className='LinksItems'>Помощь</div>
 													</NavLink>
 												</div>
-												<div className='w-full px-3'>
-													<NavLink to='wer' className='flex '>
+												<div className='w-full px-3 h-9'>
+													<NavLink to='wer' className='flex items-center'>
 														<div className='wkIconSpacing'>
 															<svg
 																fill='#71aaeb'
