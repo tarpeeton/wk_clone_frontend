@@ -49,3 +49,112 @@
 .NotificationMenu {
 	border-radius: 0 0 9px 9px;
 }
+.userDefaultImage {
+	width: 32px;
+	height: 32px;
+	border-radius: 50px;
+}
+/*  Service */
+
+.ServiceItems {
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	/* flex-flow: column; */
+	height: 76px;
+	width: 25%;
+	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.ServiceItemsImages {
+	border-radius: 12px;
+	width: 44px;
+	height: 44px;
+}
+.ServiceitemsNames {
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	padding: 0 4px;
+	max-width: 100%;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.ServiceImageEcoCystem{
+	margin-bottom: 4px;
+}
+.MoreButton {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #666565;
+	border-radius: 12px;
+	fill:#71aaeb ;
+}
+.CatalogItem {
+	padding: 14px 0 2px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.catalog {
+	color: #71aaeb;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+/*  Profile Setting Style */
+
+.userPlaceHolderImage {
+	width: 56px;
+	height: 56px;
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 100%;
+	}
+}
+.userPlaceHolderName {
+	color: #e1e3e6;
+	font-weight:500;
+	margin-top: 10px;
+	font-size: 15px;
+	line-height: 20px;
+}
+.userPlaceHolder_Subtitle {
+	color: #828282;
+	margin-top: 2px;
+	font-size: 13px;
+}
+.wkSpacingBeta {
+	height: 8px;
+	padding: 4px 0;
+}
+.wkUiButton {
+	border-radius: 8px;
+	border: 1px solid #626364;
+}
+.SettingButton {
+	font-size: 14px;
+	font-weight: 500;
+}
+.wkUiLinkColor {
+	color: #71aaeb;
+}
+.wkIconSpacing {
+	padding: 4px 12px 4px 0;
+}
+.LinksItems {
+	font-size: 13px;
+	line-height: 16px;
+	color: #e1e3e6;
+}

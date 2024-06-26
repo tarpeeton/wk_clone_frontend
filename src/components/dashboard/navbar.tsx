@@ -5,6 +5,8 @@ import { MdClear } from 'react-icons/md'
 import { HomeLinkSvg } from './navbarSvg'
 import Example from './notification'
 import { ServiceIcon } from './ServiceIcon'
+import Navbarservices from './NavbarService'
+import ProfileSettings from './Profile'
 const MainNavbar: FC = () => {
 	const [open, setIsOpen] = useState<boolean>(false)
 	const [search, setSearch] = useState<string | undefined>('')
@@ -57,12 +59,18 @@ const MainNavbar: FC = () => {
 									</div>
 							</div>
 							</div>
-							<div className='LeftNavbarElemts'>
-							<div className='flex gap-1'>
-								<div className='service'>
-									<button className='LinkAndText' >
-										<ServiceIcon/>
+							<div className='LeftNavbarElemts '>
+							<div className='flex gap-1 justify-center items-center'>
+								<div className='service flex gap-4'>
+									<Navbarservices/>
+									{/* Profile Settings */}
+
+									<button>
+										<ProfileSettings/>
 									</button>
+
+
+									
 								</div>
 							</div>
 
