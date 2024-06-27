@@ -14,10 +14,11 @@ const Register: FC = () => {
 		setIsChecked(!isChecked)
 	}
 	const handeInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
-		setData(e.target.value)
+		console.log(e)
+		setData('sdfdf')
 	}
 	const navigateToConfirm = (e: MouseEvent<HTMLButtonElement>): void => {
-		e.preventDefault()
+		console.log(e)
 		navigate('/confirm/code')
 	}
 
