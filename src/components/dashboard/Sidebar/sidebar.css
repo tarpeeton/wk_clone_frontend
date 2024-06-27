@@ -1,0 +1,38 @@
+.MainContentSidebar {
+	width: 1076px !important;
+	display: flex;
+	position: relative;
+}
+.wkUiSidebar {
+	position: absolute;
+	top: 0;
+	width: 136px;
+	padding: 12px 0 10px;
+}
+.wkUiSidebarColor {
+	color: #71aaeb;
+}
+.wkUiSidebarSpacing {
+	margin-right: 10px;
+}
+.wkUiSidebarNavigationPlaceholde {
+	font-size: 13px;
+	color: #e1e3e6;
+	font-weight: 500;
+}
+.wkUisidebarHeigth {
+	height: 30px;
+}
+.wkUiSidebarBorder {
+	border-top: 1px solid #6e6f70;
+}
+/*  Recomendations */
+
+.wk_sidebar_recomendations {
+	padding: 0 10px 0 0;
+	font-size: 12px; 
+	color: #828282;
+}
+.wk_sidebar_recomendations:hover {
+	text-decoration: underline;
+}
