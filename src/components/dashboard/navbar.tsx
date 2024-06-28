@@ -4,7 +4,7 @@ import { IoIosSearch } from 'react-icons/io'
 import { MdClear } from 'react-icons/md'
 import { HomeLinkSvg } from './navbarSvg'
 import Example from './notification'
-import { ServiceIcon } from './ServiceIcon'
+
 import Navbarservices from './NavbarService'
 import ProfileSettings from './Profile'
 const MainNavbar: FC = () => {
@@ -15,8 +15,8 @@ const MainNavbar: FC = () => {
 
 	return (
 		<>
-			<div className='ElelemtBackground h-12'>
-				<div className='h-12 content-center'>
+			<div className=' h-12'>
+				<div className='ContentFixedNavbar h-12 content-center'>
 					<div className='mainContent mx-auto ContentNavbar'>
 						<div className='flex my-auto gap-1  items-center justify-between text-white'>
 							<div className='RigthNavbarElemts flex items-center'>

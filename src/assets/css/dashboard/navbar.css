@@ -1,7 +1,16 @@
 .ContentNavbar {
 	width: 1076px !important;
 }
-
+.ContentFixedNavbar {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+		background-color: #242424;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
 .SearchInput {
 	width: 230px;
 }

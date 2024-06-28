@@ -1,0 +1,45 @@
+.NewHistory {
+	border: 1px solid #676666;
+}
+.NewHistoryInput {
+	resize: horizontal;
+	width: 200px;
+	border: none;
+	outline: none;
+	background-color: inherit;
+}
+
+
+.NewHistoryInput:focus {
+	min-width: 200px;
+}
+
+.NewHistoryColor {
+	color: #e1e3e6;
+}
+
+.medai_selector_obe {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.medi_selector_name {
+	width: 100px;
+	height: 20px;
+	align-items: center;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	display: none;
+	top: 100%;
+	bottom: 0;
+	font-size: 13px;
+	color: #e1e3e6;
+}
+.medai_selector_obe:hover .medi_selector_name  {
+	display: flex;
+	margin-top: 5px;
+	align-items: center;
+	justify-content: center;
+}

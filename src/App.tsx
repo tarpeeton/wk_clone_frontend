@@ -17,7 +17,7 @@ const App: FC = () => {
 				<Route path='/confirm/code' element={<ConfirmCode />} />
 				<Route path='/auth/register' element={<RegisterForm />} />
 				<Route path='/auth/newPassword' element={<NewPassword />} />
-				<Route path='/feed' element={<Dashboard/>} />
+				<Route path='/feed/*' element={<Dashboard />} />
 			</Routes>
 		</Router>
 	)

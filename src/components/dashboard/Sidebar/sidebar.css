@@ -3,10 +3,9 @@
 	display: flex;
 	position: relative;
 }
+
 .wkUiSidebar {
-	position: absolute;
-	top: 0;
-	width: 136px;
+	width: 13.5%;
 	padding: 12px 0 10px;
 }
 .wkUiSidebarColor {

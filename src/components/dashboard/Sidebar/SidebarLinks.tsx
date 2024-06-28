@@ -1,12 +1,23 @@
-import { FC } from 'react'
+import { FC  , useState} from 'react'
 import './sidebar.css'
 import { NavLink } from 'react-router-dom'
+import { MoreLinks } from './MoreLinks'
 
-const SidebarLinks: FC = () => {
+const SidebarLinks:FC = () => {
+	const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () =>  {
+			setDropdownVisible(false);
+	}
+		
 	return (
 		<div className='w-full flex flex-col'>
 			{/* 1 */}
-			<NavLink to='sdf' className='flex items-center wkUisidebarHeigth'>
+			<NavLink to='/feed/my/page' className='flex items-center wkUisidebarHeigth'>
 				<div className='wkUiSidebarSpacing'>
 					<svg
 						className='wkUiSidebarColor'
@@ -29,7 +40,7 @@ const SidebarLinks: FC = () => {
 				</div>
 			</NavLink>
 			{/* 2 */}
-			<NavLink to='sdf' className='flex items-center wkUisidebarHeigth'>
+			<NavLink to='/feed/new' className='flex items-center wkUisidebarHeigth'>
 				<div className='wkUiSidebarSpacing'>
 					<svg
 						className='wkUiSidebarColor'
@@ -427,7 +438,8 @@ const SidebarLinks: FC = () => {
 					</div>
 				</NavLink>
 			</div>
-			<div className='flex flex-wrap'>
+			{/* =======================BOTTOM +++++++++++++++ */}
+			<div className='flex flex-wrap relative'>
 				<NavLink className='wk_sidebar_recomendations' to='sdf'>
 					Блог
 				</NavLink>
@@ -440,8 +452,10 @@ const SidebarLinks: FC = () => {
 				<NavLink className='wk_sidebar_recomendations' to='sdf'>
 					Авторам
 				</NavLink>
-				<div className='wk_sidebar_recomendations'>
-					<NavLink className='flex justify-center items-center gap-1' to='sdf'>
+				{isDropdownVisible && <MoreLinks handleMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
+
+				<div className='wk_sidebar_recomendations' onMouseEnter={handleMouseEnter }  onMouseLeave={handleMouseLeave}>
+					<button className='flex justify-center items-center gap-1' >
 						Ещё
 						<svg
 							className='mt-1'
@@ -458,13 +472,21 @@ const SidebarLinks: FC = () => {
 								fill-rule='evenodd'
 							></path>
 						</svg>
-					</NavLink>
+					</button>
 				</div>
 				
 			</div>
-			<div className='wkUiSidebarBorder'>
-				<NavLink to='sdf' className='wk_sidebar_recomendations'>
-				Применяются рекомендательные технологии
+			<div className='wkUiSidebarBorder pt-[8px]'>
+				<NavLink to='' className='wk_sidebar_recomendations '>
+					<span>
+						<span className='flex items-center gap-0'>
+						Применяются 
+						рекомендательные технологии
+
+						</span>
+
+
+					</span>
 				</NavLink>
 				</div>
 		</div>
