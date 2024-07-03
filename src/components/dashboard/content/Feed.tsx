@@ -1,17 +1,22 @@
 import React, { FC, useState } from 'react'
 import '../../../assets//css/dashboard/feed.css'
 import { NavLink } from 'react-router-dom'
-import {EmojiPicker} from './Emoji'
+import EmojiPicker from './Emoji'
+import FanctComponent from './Fancy'
 
 const Feed: FC = () => {
 	const [Focus, setFocus] = useState<boolean>(false)
-	const [text, setText] = useState<string>('');
-	
+	const [togle, setTogle] = useState<boolean>(false)
+	const [text, setText] = useState<string>('')
+	const [selectedValue, setSelectedValue] = useState<number | null>(null)
+	const fancySelectedValue = selectedValue === 0 ? "Видно всем" :
+	selectedValue === 1 ? "Видно друзьям" :
+	selectedValue === 2 ? "близких друзей" :
+	"Видно всем";
 
-  const handleEmojiClick = (emoji) => {
+	const handleEmojiClick = (emoji: string): void => {
     setText(text + emoji);
   };
-
 	const handleFocusEvent = (e: React.FocusEvent<HTMLInputElement>) => {
 		setFocus(true)
 	}
@@ -19,11 +24,7 @@ const Feed: FC = () => {
 	const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setText(e.target.value)
 	}
-	const handleFocusEventTextArea = (
-		e: React.FocusEvent<HTMLTextAreaElement>
-	) => {
-		// Your focus event handling logic here
-	}
+
 	// Emoji Picker
 	const [picker, setPickerOpen] = useState<boolean>(false)
 	const mouseEnter = () => setPickerOpen(true)
@@ -32,7 +33,7 @@ const Feed: FC = () => {
 	return (
 		<div className='flex flex-row gap-[5%]'>
 			<div className='new_history_content w-[55%] pt-[15px]'>
-				<div className='NewHistory rounded-lg flex '>
+				<div className='NewHistory relative rounded-xl flex '>
 					<div className='w-[10%] rounded-[100%] flex justify-end pt-[10px] pb-[20px]'>
 						<img
 							className='w-[28px] h-[28px] rounded-[100%]  '
@@ -40,14 +41,14 @@ const Feed: FC = () => {
 						/>
 					</div>
 					{Focus ? (
-						<div className='w-[90%] h-[150px] relative flex new_history_spacing_wk_ui justify-between'>
-							<div className='w-full'>
+						<div className='w-[90%] h-[300px] relative flex new_history_spacing_wk_ui justify-between'>
+							<div className='w-full h-[100%]'>
 								<textarea
-									className='NewHistoryColor w-full outline-none border-none bg-inherit resize-none overflow-hidden'
+									className='NewHistoryColor responsive_text_area w-full outline-none border-none bg-inherit resize-none overflow-hidden h-[90%]'
 									placeholder='Что у вас нового?'
 									aria-label='Что у вас нового?'
-									onFocus={handleFocusEventTextArea}
 									onChange={handleChange}
+									maxLength={600}
 									value={text}
 									rows={1}
 									style={{
@@ -56,6 +57,48 @@ const Feed: FC = () => {
 										padding: '8px 0',
 									}} // Adjust as needed
 								/>
+								<div className='absolute w-[80%] mx-auto bottom-[60px] showBtnBorder flex items-center post_action_btn'>
+									<div
+										className='flex items-center post_action_btn_spacing'
+										onClick={() => setTogle(true)}
+									>
+										<span>{fancySelectedValue}</span>
+										<svg
+											className='mt-1'
+											fill='none'
+											height='8'
+											viewBox='0 0 12 8'
+											width='12'
+											xmlns='http://www.w3.org/2000/svg'
+										>
+											<path
+												clip-rule='evenodd'
+												d='M2.16 2.3a.75.75 0 0 1 1.05-.14L6 4.3l2.8-2.15a.75.75 0 1 1 .9 1.19l-3.24 2.5c-.27.2-.65.2-.92 0L2.3 3.35a.75.75 0 0 1-.13-1.05z'
+												fill='currentColor'
+												fill-rule='evenodd'
+											></path>
+										</svg>
+									</div>
+									<div className='flex items-center post_action_btn_spacing'>
+										<span>Сейчас</span>
+										<svg
+											className='mt-1'
+											fill='none'
+											height='8'
+											viewBox='0 0 12 8'
+											width='12'
+											xmlns='http://www.w3.org/2000/svg'
+										>
+											<path
+												clip-rule='evenodd'
+												d='M2.16 2.3a.75.75 0 0 1 1.05-.14L6 4.3l2.8-2.15a.75.75 0 1 1 .9 1.19l-3.24 2.5c-.27.2-.65.2-.92 0L2.3 3.35a.75.75 0 0 1-.13-1.05z'
+												fill='currentColor'
+												fill-rule='evenodd'
+											></path>
+										</svg>
+									</div>
+									{togle && <FanctComponent setTogle={setTogle} setSelectedValue={setSelectedValue}/>}
+								</div>
 							</div>
 							{/* Emoje */}
 							<div className='NewHistoryColor relative'>
@@ -76,12 +119,17 @@ const Feed: FC = () => {
 											clip-rule='evenodd'
 										></path>
 									</svg>{' '}
-									{picker && <EmojiPicker mouseEnter={mouseEnter} mouseLeave={mouseLeave} handleEmojiClick={handleEmojiClick}/>}
-									
+									{picker && (
+										<EmojiPicker
+											mouseEnter={mouseEnter}
+											mouseLeave={mouseLeave}
+											handleEmojiClick={handleEmojiClick}
+										/>
+									)}
 									{/* end Picker */}
 								</div>
 							</div>
-							<div className='media_selector_fix absolute bottom-0 flex w-[35%]'>
+							<div className='media_selector_fix absolute bottom-[10px] flex justify-between w-[35%]'>
 								<NavLink className='medai_selector_obe mr-[10px]' to='/camera'>
 									<span>
 										<svg
@@ -198,6 +246,8 @@ const Feed: FC = () => {
 									</span>
 									<span className='medi_selector_name bg-white'>Клип</span>
 								</NavLink>
+							<button>button</button>
+
 							</div>
 						</div>
 					) : (

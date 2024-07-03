@@ -8,7 +8,6 @@ import {
 } from '@headlessui/react'
 import { NavLink } from 'react-router-dom'
 import '../../assets/css/dashboard/navbar.css'
-import { ServiceIcon } from './ServiceIcon'
 
 const ProfileSettings: FC = () => {
 	return (

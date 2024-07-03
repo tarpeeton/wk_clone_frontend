@@ -4,7 +4,6 @@
 .ContentFixedNavbar {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     position: fixed;
 		background-color: #242424;
     top: 0;

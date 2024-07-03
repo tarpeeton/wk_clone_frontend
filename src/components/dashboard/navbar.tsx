@@ -7,6 +7,7 @@ import Example from './notification'
 
 import Navbarservices from './NavbarService'
 import ProfileSettings from './Profile'
+
 const MainNavbar: FC = () => {
 	const [open, setIsOpen] = useState<boolean>(false)
 	const [search, setSearch] = useState<string | undefined>('')
