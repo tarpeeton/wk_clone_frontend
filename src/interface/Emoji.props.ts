@@ -1,5 +1,4 @@
 export interface EmojiPickerProps {
-  mouseEnter: () => void;
-  mouseLeave: () => void;
+  setPickerOpen: React.Dispatch<React.SetStateAction<boolean>>;
   handleEmojiClick: (emoji: string) => void;
 }

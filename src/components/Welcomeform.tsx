@@ -3,12 +3,10 @@ import { NavLink } from 'react-router-dom'
 import SVG from './svg/formSvg'
 
 const WelcomeForm: FC = () => {
-	const [isChecked, setIsChecked] = useState<boolean>(true)
+
 	const [email, setEmailOrPassword] = useState<string>('')
 
-	const handleCheckboxChange = (): void => {
-		setIsChecked(!isChecked)
-	}
+	
 	const serverUpdate = (e: MouseEvent<HTMLButtonElement>): void => {
 		e.preventDefault()
 		console.log(email)
@@ -46,38 +44,8 @@ const WelcomeForm: FC = () => {
 				/>
 			</div>
 			<div className='flex mt-3 w-full items-center'>
-				<input
-					className='hidden'
-					type='checkbox'
-					id='save-login'
-					checked={isChecked}
-					onChange={handleCheckboxChange}
-				/>
-				<label
-					htmlFor='save-login'
-					className='relative flex items-center cursor-pointer'
-				>
-					{isChecked ? (
-						<svg
-							width='21'
-							height='21'
-							viewBox='0 0 20 20'
-							fill='none'
-							className='flex w-5 h-5 text-white'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<path
-								fillRule='evenodd'
-								clipRule='evenodd'
-								d='M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 0 0 1.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 0 0 1.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 0 0-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 0 0-1.74 1.74Zm12.2 3.8a.9.9 0 1 0-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 0 0-1.28 1.27l2.7 2.69a.9.9 0 0 0 1.27 0l5.3-5.3Z'
-								fill='currentColor'
-							></path>
-						</svg>
-					) : (
-						<div className='border border-lg rounded-md w-5 h-5'></div>
-					)}
+				<input type="checkbox" className='save_login' />
 					<span className='save textContract ml-2'>Сохранить вход</span>
-				</label>
 			</div>
 			<div className='w-full justify-center border rounded-md items-center  mt-1 h-9 bg-white'>
 				<button
