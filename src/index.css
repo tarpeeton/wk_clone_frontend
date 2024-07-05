@@ -1,7 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* SCROLL BAR */
 
+body::-webkit-scrollbar {
+  width: 15px;    
+	overflow: auto;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(72, 72, 72);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+	height: 10px;
+  background-color: rgb(55, 55, 56);    /* цвет плашки */
+  border: 1px solid rgb(54, 53, 51);  /* padding вокруг плашки */
+}
 .w-65 {
 	width: 65%;
 }

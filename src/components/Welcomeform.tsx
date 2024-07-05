@@ -3,14 +3,12 @@ import { NavLink } from 'react-router-dom'
 import SVG from './svg/formSvg'
 
 const WelcomeForm: FC = () => {
-
 	const [email, setEmailOrPassword] = useState<string>('')
 
-	
 	const serverUpdate = (e: MouseEvent<HTMLButtonElement>): void => {
 		e.preventDefault()
 		console.log(email)
-};
+	}
 
 	return (
 		<div className='form  FormElemtsBg rounded-xl'>
@@ -40,12 +38,14 @@ const WelcomeForm: FC = () => {
 					type='text'
 					className='inputForm w-full h-9 border-none rounded-lg outline-none pt-2 pb-2 px-3 text-white'
 					placeholder='Телефон или почта'
-					onChange={(e) => setEmailOrPassword(e.target.value)}
+					name='email_or_password'
+					id='email_or_password'
+					onChange={e => setEmailOrPassword(e.target.value)}
 				/>
 			</div>
 			<div className='flex mt-3 w-full items-center'>
-				<input type="checkbox" className='save_login' />
-					<span className='save textContract ml-2'>Сохранить вход</span>
+				<input type='checkbox' className='save_login' />
+				<span className='save textContract ml-2'>Сохранить вход</span>
 			</div>
 			<div className='w-full justify-center border rounded-md items-center  mt-1 h-9 bg-white'>
 				<button

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { MainNavbar } from './navbar';
+import { MainNavbar } from './navbar/navbar';
 import { SideBar } from './Sidebar/Siderbar';
 
 
