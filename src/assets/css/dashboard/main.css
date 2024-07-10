@@ -1,0 +1,90 @@
+.wk-ui-content {
+	padding: 8px;
+	background-color: #222222;
+	border: 1px solid #676666;
+	background-color: #222222;
+	box-shadow: var(0 0 0 1px #363738);
+	margin: 16px 0 16px 0;
+	border-radius: 12px;
+}
+
+.wk-ui-typography {
+	color: #e1e3e6;
+	font-size: 17px;
+	line-height: 22px;
+	font-weight: 500;
+}
+.wk-ui-setting-button {
+	color: #71aaeb;
+	font-size: 13px;
+	text-decoration: none;
+}
+.wk-ui-setting-button:hover {
+	text-decoration: underline;
+}
+.wk-ui-header {
+	padding: 0 16px 0 16px;
+}
+.wk-ui-spacing {
+	height: 4px;
+	padding: 2px 0;
+	position: relative;
+}
+/*  SOME CONETNT */
+.some-content {
+	padding-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.history {
+	width: 100%;
+	position: relative;
+	border-radius: 13px;
+	padding-top: 12px;
+
+}
+.wk-ui-bg-image {
+	border-radius: 8px;
+	width: 94px;
+	height: 167px;
+}
+.bg-image {
+	object-fit: cover;
+	visibility: visible;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+.story-card-gradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 66%;
+}
+.stroy-module-content {
+	position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%;
+    padding: 0 8px 10px;
+    color: #222222;
+    box-sizing: border-box;
+}
+.story-card-avatar {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 100%;
+}
+.add-story {
+	fill: #71aaeb;
+}

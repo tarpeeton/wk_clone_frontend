@@ -5,6 +5,7 @@ import FanctComponent from './Fancy'
 import EmojiPicker from './newHostory/emoji/Emoji'
 import AppMedia from './newHostory/media/app_media'
 import { News } from './news/news'
+import { MainContent } from './main'
 
 const Feed: FC = () => {
 	const [Focus, setFocus] = useState<boolean>(false)
@@ -269,6 +270,8 @@ const Feed: FC = () => {
 						</div>
 					)}
 				</div>
+				{/* ALLL CONTENTs */}
+				<MainContent/>
 			</div>
 			{/* =========================== NEWS =================================== */}
 			<div className='w-[37%] pt-[15px]'>
