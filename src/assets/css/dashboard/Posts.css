@@ -1,15 +1,19 @@
-.mainContent {
+.main-post-content {
 	background-color: #222222;
 	border: 1px solid #676666;
 	background-color: #222222;
 	box-shadow: var(0 0 0 1px #363738);
 	border-radius: 12px;
 }
-
+.gray__color {
+	color: #828282;
+	font-size: 13px;
+}
 .channel-name {
 	color: #71aaeb;
 	font-size: 13px;
 	text-decoration: none;
+	font-weight: 600;
 }
 
 .channel-name:hover {
@@ -19,8 +23,83 @@
 	font-size: 13px;
 	color: #828282;
 	text-decoration: none;
+	font-weight: 500;
 }
 
 .subtitle:hover {
 	text-decoration: underline;
+}
+.wall-text {
+	padding: 8px 20px 20px;
+	p {
+		font-size: 13px;
+		font-weight: 400;
+		color: azure;
+		line-height: 1.462;
+		overflow: hidden;
+		word-wrap: break-word;
+	}
+}
+
+/*  LIKE */
+.like {
+	background-color: #333333;
+	padding: 4px 12px;
+	border: none;
+	outline: none;
+}
+
+.like-count {
+	color: aliceblue;
+	z-index: 30;
+}
+.count {
+	color: antiquewhite;
+}
+
+.inputLike {
+	display: none;
+}
+/* viewers count */
+
+.viewers__count {
+	height: 14px;
+	line-height: 15px;
+	overflow: hidden;
+}
+
+
+/* REPlies */
+.replies_list {
+	border-top: 0.800px solid #363738;
+}
+.reply_text {
+	color: #e1e3e6;
+	font-size: 12.5px;
+	font-weight: 500;
+}
+
+.reply_time {
+	font-size: 12.5px;
+	color: #939393;
+}
+.reply_link {
+	font-size: 13px;
+	color: #71aaeb;
+}
+.reply_text {
+	word-wrap: break-word;
+	overflow: hidden;
+	line-height: 1.36;
+}
+.reply_like {
+	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23b2b2b2%22%20d%3D%22M10.96%202.5A4.036%204.036%200%200115%206.534c0%202.211-.884%203.316-4.52%206.14l-1.099.853a2.252%202.252%200%2001-2.762%200l-1.099-.853C1.884%209.85%201%208.745%201%206.534A4.036%204.036%200%20015.04%202.5c1.111%200%202.103.481%202.96%201.402.857-.92%201.849-1.402%202.96-1.402zM5.04%203.998A2.538%202.538%200%20002.5%206.534c0%201.588.653%202.404%203.94%204.957l1.1.854c.27.21.65.21.92%200l1.1-.854c3.287-2.553%203.94-3.37%203.94-4.957%200-1.4-1.137-2.536-2.54-2.536-.848%200-1.618.482-2.343%201.528l-.206.297a.5.5%200%2001-.822%200l-.206-.297C6.658%204.48%205.888%203.998%205.04%203.998z%22%2F%3E%3C%2Fsvg%3E);
+	background-size: 16px;
+	background-position: center;
+	width: 16px;
+	opacity: .8;
+	height: 13px;
+}
+.reply-like-count:hover  div{
+	opacity: 1;
 }

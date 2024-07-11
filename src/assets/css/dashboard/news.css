@@ -62,13 +62,13 @@
 }
 
 
-input[type=checkbox]{
+.inputSwitch[type=checkbox]{
 	height: 0;
 	width: 0;
 	visibility: hidden;
 }
 
-label {
+.switchLabel {
 	text-indent: -9999px;
 	background: grey;
 	display: block;
@@ -80,7 +80,7 @@ label {
     cursor: pointer;
 }
 
-label:after {
+.switchLabel:after {
 	content: "";
 	float: left;
 	position: relative;
@@ -95,7 +95,7 @@ label:after {
 
 
 
-input:checked + label:after {
+.inputSwitch:checked + .switchLabel:after {
 	content: "";
 	float: left;
 	position: relative;
@@ -108,7 +108,7 @@ input:checked + label:after {
 	transition: left .1s ease;
 }
 
-label:active:after {
+.switchLabel:active:after {
 	width: 10px;
 }
 

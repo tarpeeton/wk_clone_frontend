@@ -101,8 +101,8 @@ const News: FC = () => {
 					</span>
 				</div>
 				<div className='sitcher flex items-center relative'>
-					<input type='checkbox' id='switch' />
-					<label htmlFor='switch'>Toggle</label>
+					<input className='inputSwitch' type='checkbox' id='switch' />
+					<label className='switchLabel' htmlFor='switch'>Toggle</label>
 				</div>
 			</div>
 		</>
