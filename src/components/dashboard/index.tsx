@@ -8,12 +8,8 @@ const Dashboard: FC = () => {
     return (
         <>
             <MainNavbar />
-            <div className='w-full h-screen flex content-center bg-zinc-900'>
+            <div className='w-full flex content-center bg-zinc-900'>
                 <SideBar />
-                {/* Content */}
-              
-             
-                {/* Recommendations */}
             </div>
         </>
     );
